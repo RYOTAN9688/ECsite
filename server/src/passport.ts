@@ -50,7 +50,7 @@ passport.use(
     {
       clientID: FACEBOOK_CLIENT_ID,
       clientSecret: FACEBOOK_CLIENT_SECRET,
-      callbackURL: '/auth/facebook/return',
+      callbackURL: '/auth/facebook/callback',
     },
     function (accessToken, refreshToken, profile, done) {
       done(null, profile);
