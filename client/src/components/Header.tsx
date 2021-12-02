@@ -1,6 +1,7 @@
 import { Search, ShoppingCartOutlined } from '@mui/icons-material';
 import { Badge } from '@mui/material';
 import { FC } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -77,7 +78,9 @@ export const Header: FC = () => {
           <Logo>ECShop</Logo>
         </Center>
         <Right>
-          <MenuItem>Login</MenuItem>
+          <Link to='/Auth'>
+            <MenuItem>Login</MenuItem>
+          </Link>
           <MenuItem>
             <Badge badgeContent={4}>
               <ShoppingCartOutlined />
