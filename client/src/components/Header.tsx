@@ -1,4 +1,4 @@
-import { Search, ShoppingCartOutlined } from '@mui/icons-material';
+import { Search, ShoppingCartOutlined, FavoriteBorderOutlined } from '@mui/icons-material';
 import { Badge } from '@mui/material';
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
@@ -6,6 +6,7 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   height: 60px;
+  padding-bottom: 2vw;
 `;
 
 const Wrapper = styled.div`
@@ -33,7 +34,8 @@ const SearchContainer = styled.div`
   display: flex;
   align-items: center;
   margin-left: 25px;
-  padding: 5px;
+  padding: 10px 20px;
+  border-radius: 5px;
 `;
 
 const Input = styled.input`
@@ -58,6 +60,7 @@ const Right = styled.div`
 `;
 
 const MenuItem = styled.div`
+  display: flex;
   font-size: 15px;
   cursor: pointer;
   margin-left: 25px;
@@ -70,7 +73,7 @@ export const Header: FC = () => {
         <Left>
           <Language>JA</Language>
           <SearchContainer>
-            <Input placeholder='Search' />
+            <Input placeholder='アイテムを検索する' />
             <Search style={{ color: 'gray', fontSize: 16 }} />
           </SearchContainer>
         </Left>
@@ -82,6 +85,7 @@ export const Header: FC = () => {
             <MenuItem>Login</MenuItem>
           </Link>
           <MenuItem>
+            <FavoriteBorderOutlined style={{ marginRight: '20px' }} />
             <Badge badgeContent={4}>
               <ShoppingCartOutlined />
             </Badge>
