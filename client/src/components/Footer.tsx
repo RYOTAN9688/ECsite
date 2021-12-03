@@ -19,7 +19,7 @@ const Left = styled.div`
   padding-top: 20px;
 `;
 const Logo = styled.h1``;
-const Desc = styled.div``;
+
 const SocialContainer = styled.div`
   display: flex;
 `;
@@ -58,7 +58,6 @@ export const Footer: FC = () => {
       <Container>
         <Left>
           <Logo>ECShop</Logo>
-          <Desc></Desc>
           <SocialContainer>
             <SocialIcon>
               <Twitter color='primary' />

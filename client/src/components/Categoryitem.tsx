@@ -11,9 +11,10 @@ const Container = styled.div`
 const Image = styled.img`
   width: 100%;
   height: 100%;
+  :hover {
+    opacity: 0.5;
+  }
 `;
-
-const Info = styled.div``;
 
 const Title = styled.h1``;
 
@@ -23,9 +24,7 @@ export const CategoryItem: FC<{ item: categoriesProps }> = ({ item }) => {
       <Container>
         <Title>{item.title}</Title>
         <Link to={`/categories/${item.cat}}`}>
-          <Info>
-            <Image src={item.img} />
-          </Info>
+          <Image src={item.img} />
         </Link>
       </Container>
     </>
