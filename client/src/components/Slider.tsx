@@ -43,8 +43,15 @@ const Arrow = styled.div`
 const Wrapper = styled.div`
   height: 100%;
   display: flex;
-  transition: all 1.5s ease;
+  transition: all 5s;
   transform: translateX(${(props: WrapperProps) => props.slideIndex * -100}vw);
+  :hover {
+    transform: translateX(-20px);
+    border-radius: 0 50%;
+    box-shadow: 0 3px 10px 0 #333;
+    opacity: 1;
+    cursor: pointer;
+  }
 `;
 
 const Slide = styled.div`

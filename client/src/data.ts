@@ -1,6 +1,10 @@
 import model1 from './public/model.jpg';
 import model2 from './public/model2.jpg';
-interface Props {
+import shirt from './public/shirt.jpg';
+import jacket from './public/jackets.jpg';
+import denim from './public/denim.jpg';
+
+interface sliderProps {
   id: number;
   img: string;
   title: string;
@@ -8,7 +12,7 @@ interface Props {
   bg: string;
 }
 
-export const sliderItem: Props[] = [
+export const sliderItem: sliderProps[] = [
   {
     id: 1,
     img: model1,
@@ -33,8 +37,36 @@ export const sliderItem: Props[] = [
   {
     id: 4,
     img: model2,
-    title: 'Winter Sele',
+    title: 'Winter SALE',
     desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
     bg: 'fff',
+  },
+];
+
+export interface categoriesProps {
+  id: number;
+  img: string;
+  title: string;
+  cat: string;
+}
+
+export const categories: categoriesProps[] = [
+  {
+    id: 1,
+    img: shirt,
+    title: 'SHIRT',
+    cat: 'shirt',
+  },
+  {
+    id: 2,
+    img: jacket,
+    title: 'JACKET',
+    cat: 'jacket',
+  },
+  {
+    id: 3,
+    img: denim,
+    title: 'DENIM',
+    cat: 'denim',
   },
 ];
