@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
 import styled from 'styled-components';
-import { SearchOutlined, Favorite, ShoppingBagOutlined } from '@mui/icons-material';
+import { Favorite, ShoppingBagOutlined } from '@mui/icons-material';
 import { ProductsProps } from '../data/data';
 import { IconButton } from '@mui/material';
 import { red } from '@mui/material/colors';
