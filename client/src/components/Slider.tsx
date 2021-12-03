@@ -2,7 +2,7 @@ import React, { FC, useState } from 'react';
 import { ArrowLeftOutlined, ArrowRightOutlined } from '@mui/icons-material';
 import styled from 'styled-components';
 
-import { sliderItem } from '../data';
+import { sliderItem } from '../data/data';
 
 interface ArrowProps {
   direction: string;
@@ -43,15 +43,8 @@ const Arrow = styled.div`
 const Wrapper = styled.div`
   height: 100%;
   display: flex;
-  transition: all 5s;
+  transition: all 1.5s ease;
   transform: translateX(${(props: WrapperProps) => props.slideIndex * -100}vw);
-  :hover {
-    transform: translateX(-20px);
-    border-radius: 0 50%;
-    box-shadow: 0 3px 10px 0 #333;
-    opacity: 1;
-    cursor: pointer;
-  }
 `;
 
 const Slide = styled.div`
@@ -68,7 +61,7 @@ const ImgContainer = styled.div`
 `;
 
 const Image = styled.img`
-  height: 90%;
+  height: 100%;
 `;
 
 const InfoContainer = styled.div`

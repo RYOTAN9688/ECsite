@@ -1,38 +1,32 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { categoriesProps } from '../data';
+import { categoriesProps } from '../data/data';
 
 const Container = styled.div`
-  position: relative;
-  flex: flex;
+  display: flex;
+  flex-direction: column;
 `;
 
 const Image = styled.img`
   width: 100%;
   height: 100%;
+  :hover {
+    opacity: 0.5;
+  }
 `;
 
-const Info = styled.div`
-  display: flex;
-`;
-
-const Title = styled.h1`
-  position: absolute;
-  color: black;
-  top: 0;
-  left: 0;
-`;
+const Title = styled.h1``;
 
 export const CategoryItem: FC<{ item: categoriesProps }> = ({ item }) => {
   return (
-    <Container>
-      <Info>
+    <>
+      <Container>
+        <Title>{item.title}</Title>
         <Link to={`/categories/${item.cat}}`}>
           <Image src={item.img} />
-          <Title>{item.title}</Title>
         </Link>
-      </Info>
-    </Container>
+      </Container>
+    </>
   );
 };
