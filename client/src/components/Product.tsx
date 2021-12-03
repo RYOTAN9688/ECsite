@@ -1,7 +1,9 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import styled from 'styled-components';
-import { SearchOutlined, FavoriteBorderOutlined, ShoppingBagOutlined } from '@mui/icons-material';
+import { SearchOutlined, Favorite, ShoppingBagOutlined } from '@mui/icons-material';
 import { ProductsProps } from '../data/data';
+import { IconButton } from '@mui/material';
+import { red } from '@mui/material/colors';
 
 const Info = styled.div`
   opacity: 0;
@@ -63,6 +65,11 @@ const Icon = styled.div`
 `;
 
 export const Product: FC<{ item: ProductsProps }> = ({ item }) => {
+  const [favo, setFavo] = useState<boolean>(false);
+
+  const favoriteHandleClick = () => {
+    setFavo(!favo);
+  };
   return (
     <Container>
       <Circle />
@@ -72,10 +79,9 @@ export const Product: FC<{ item: ProductsProps }> = ({ item }) => {
           <ShoppingBagOutlined />
         </Icon>
         <Icon>
-          <SearchOutlined />
-        </Icon>
-        <Icon>
-          <FavoriteBorderOutlined />
+          <IconButton onClick={() => favoriteHandleClick()}>
+            {favo ? <Favorite sx={{ color: red[400] }} /> : <Favorite />}
+          </IconButton>
         </Icon>
       </Info>
     </Container>
