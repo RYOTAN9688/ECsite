@@ -30,13 +30,14 @@ const Arrow = styled.div`
   border-radius: 50%;
   display: flex;
   align-items: center;
+  justify-content: center;
   top: 0;
   bottom: 0;
   left: ${(props: ArrowProps) => props.direction === 'left' && '10px'};
   right: ${(props: ArrowProps) => props.direction === 'right' && '10px'};
   margin: auto;
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 0.8;
   z-index: 1;
 `;
 
